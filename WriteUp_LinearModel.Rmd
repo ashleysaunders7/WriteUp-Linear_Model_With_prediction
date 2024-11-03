@@ -107,5 +107,20 @@ Model 2 is predicted to be fit at -2.80904. It will be between -5.444714 and -0.
 basicNN + geom_point() + ggtitle("SIMS~GRIP") + theme(plot.title = element_text(hjust = 0.5, size = 20)) + geom_smooth(method=lm)
 ```
 
+## Model 3 SIMS~ARM+GRIP
+
+### Numerical Results
+```{r}
+cor(SIMS~ARM,data=data)
+```
+```{r}
+cor(SIMS~GRIP,data=data)
+```
+```{r}
+cor(SIMS~ARM+GRIP,data=data)
+```
+
+Model 3 has very high positive correlation compared to the other 2. 
+
 
 
