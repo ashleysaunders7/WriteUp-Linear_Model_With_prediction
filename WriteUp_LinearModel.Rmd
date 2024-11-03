@@ -102,5 +102,10 @@ predict(model.2,target,interval=c("prediction"))
 
 Model 2 is predicted to be fit at -2.80904. It will be between -5.444714 and -0.1738933.
 
+### Linear Fit Model 2
+```{r}
+basicNN + geom_point() + ggtitle("SIMS~GRIP") + theme(plot.title = element_text(hjust = 0.5, size = 20)) + geom_smooth(method=lm)
+```
+
 
 
