@@ -170,5 +170,6 @@ anova(model.1,model.2)
 
 Model 1 has less errors than model 2, making model 1 better than model 2 shown by the data.
 
-
+## Discussion and Conclusion
+When comparing Models 1 and 3, the P-value is 0.000004894, which is extremely low.  In comparison of models 2 and 3, the p-value is 0.000000001495. We may conclude from this number that Arm~Grip is providing greater data than Arm~Sims. Additionally, this figure indicates that Model 3 is better than Model 2 .We developed models and examined their probability.
 
