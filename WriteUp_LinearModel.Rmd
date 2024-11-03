@@ -56,5 +56,17 @@ predict(model.1,target,interval=c("prediction"))
 
 The plot predicts 0.7063836. The values are predicted to be between -1.726209 and 3.128977.
 
+### Linear Fit Model 1
+
+```{r}
+basicNN + geom_point() + ggtitle("SIMS~ARM") + theme(plot.title = element_text(hjust = 0.5, size = 20)) + geom_smooth(method=lm)
+
+```
+
+## Model 2 SIMS~GRIP
+
+
+
+
 
 
