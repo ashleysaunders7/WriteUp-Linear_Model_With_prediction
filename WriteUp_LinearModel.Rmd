@@ -147,4 +147,28 @@ predict(model.3,target,interval=c("prediction"))
 
 The model shows -1.073855 predicted. The value is between -3.462155 and 1.314444.
 
+### Anova Tests for Models
+
+### Model 1~Model 3
+```{r}
+anova(model.1,model.3)
+```
+
+The p-value is shown to be very small. Model 3 is better than model 1 because the test shows Model 1 had 217.88 errors and Model 3 had 188.43 errors.
+
+### Model 2~Model 3
+```{r}
+anova(model.2,model.3)
+```
+
+The p-value is predicted to be 0.000000001495. Model 3 has less errors than model 2. Model 3 would be most accurate.
+
+### Model 1~Model 2
+```{r}
+anova(model.1,model.2)
+```
+
+Model 1 has less errors than model 2, making model 1 better than model 2 shown by the data.
+
+
 
