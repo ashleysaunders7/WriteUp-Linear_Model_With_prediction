@@ -122,5 +122,12 @@ cor(SIMS~ARM+GRIP,data=data)
 
 Model 3 has very high positive correlation compared to the other 2. 
 
+### Inferential Results
 
+```{r}
+model.3 <- lm(SIMS~ARM+GRIP,data=data)
+summary.lm(model.3)
+```
+
+The equation is SIMS=0.037311ARM + 0.024470GRIP + 5.433871. This is the predicted 3D line.
 
