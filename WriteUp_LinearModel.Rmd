@@ -24,3 +24,13 @@ basicNN + geom_point() + ggtitle("SIMS vs ARM") + theme(plot.title = element_tex
 ```
 
 Some of the dots in this scatter plot are exhibiting a diagonal upward trend, which indicates a positive association. This statistic demonstrates the workers' expected arm strength from the simulation. This indicates that the majority of the population should have arm strength between 50 and 100. 
+
+### Numerical Results
+
+```{r}
+cor(SIMS~ARM,data=data)
+```
+
+There is a clear positive correlation. The association between the two increases with the size of the number. Since it is getting close to 1, we can see there is a slight correlation between the two. 
+
+
