@@ -28,7 +28,7 @@ Some of the dots in this scatter plot are exhibiting a diagonal upward trend, wh
 ### Numerical Results
 
 ```{r}
-cor(SIMS~ARM,data=data)
+cor(SIMS~GRIP,data=data)
 ```
 
 There is a clear positive correlation. Since it is getting close to 1 and increasing, we can see there is correlation between the two. 
@@ -40,4 +40,21 @@ model.1 <- lm(SIMS~ARM,data=data)
 summary.lm(model.1)
 ```
 
-The line moves from the lower left corner to the upper right corner because of the positive coefficient. The numerical results make this clear with an equation SIMS=0.054563xARM-4.095160. 
+The line moves from the lower left corner to the upper right corner because of the positive coefficient. The numerical results make this clear with an equation SIMS=0.045463GRIP - 4.809675. 
+
+### Create target
+
+```{r}
+target<-data.frame(ARM=88, GRIP=44)
+```
+
+### Predict Target Point of Model 1
+
+```{r}
+predict(model.1,target,interval=c("prediction"))
+```
+
+The plot predicts 0.7063836. The values are predicted to be between -1.726209 and 3.128977.
+
+
+
