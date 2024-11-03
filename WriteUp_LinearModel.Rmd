@@ -1,4 +1,5 @@
-title: "WriteUp Linear Model with prediction"      
+---
+title: "WriteUp Linear Model with prediction"   
 author: "Ashley Saunders"         
 date: "10/22/2024"      
 output: html_document
@@ -11,3 +12,15 @@ require(tigerstats)
 require(knitr)
 data <- read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_strength/data.txt",sep="",header=TRUE)  
 ```
+
+## Model 1 SIMS~ARM
+### Scarttered Plot
+```{r}
+basicNN <- ggplot(data,aes(y=SIMS,x=ARM))
+
+```
+```{r}
+basicNN + geom_point() + ggtitle("SIMS vs ARM") + theme(plot.title = element_text(hjust = 0.5, size = 20))
+```
+
+Some of the dots in this scatter plot are exhibiting a diagonal upward trend, which indicates a positive association. This statistic demonstrates the workers' expected arm strength from the simulation. This indicates that the majority of the population should have arm strength between 50 and 100. 
